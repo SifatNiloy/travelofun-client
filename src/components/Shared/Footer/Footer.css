@@ -1,0 +1,13 @@
+.footer-background {
+    background-color: black;
+    margin-bottom: -15px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+ul {
+    list-style-type: none;
+}
