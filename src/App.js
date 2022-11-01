@@ -11,6 +11,8 @@ import Register from './components/Login/Register/Register';
 import Blog from './components/Home/Blog/Blog';
 import Offers from './components/Home/Offers/Offers';
 import ServiceDetail from './components/ServiceDetail/ServiceDetail';
+import Checkout from './components/Checkout/Checkout';
+import NotFound from './components/Shared/NotFound/NotFound';
 
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}>Home</Route>
+        <Route path='/home' element={<Home></Home>}>Home</Route>
         <Route path='/packages' element={<Packages></Packages>}></Route>
         <Route path='/package/:packageId' element={<ServiceDetail></ServiceDetail>}></Route>
         <Route path='/about' element={<About></About>}>About</Route>
@@ -26,6 +29,8 @@ function App() {
         <Route path='/offers' element={<Offers></Offers>}></Route>
         <Route path='/login' element={<Login></Login>}>Login</Route>
         <Route path='/register' element={<Register></Register>}>Register</Route>
+        <Route path='/checkout' element={<Checkout></Checkout>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
