@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from '../src/images/logo/logo2.png'
 import './App.css';
 import Header from './components/Shared/Header/Header';
 import Footer from './components/Shared/Footer/Footer';
@@ -10,6 +10,7 @@ import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
 import Blog from './components/Home/Blog/Blog';
 import Offers from './components/Home/Offers/Offers';
+import ServiceDetail from './components/ServiceDetail/ServiceDetail';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}>Home</Route>
         <Route path='/packages' element={<Packages></Packages>}></Route>
+        <Route path='/package/:packageId' element={<ServiceDetail></ServiceDetail>}></Route>
         <Route path='/about' element={<About></About>}>About</Route>
         <Route path='/blog' element={<Blog></Blog>}>About</Route>
         <Route path='/offers' element={<Offers></Offers>}></Route>

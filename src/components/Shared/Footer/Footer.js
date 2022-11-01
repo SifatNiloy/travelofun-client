@@ -7,7 +7,7 @@ const Footer = () => {
             <div className='mt-5 text-white'>
                 <div>
                     <h4>Stay Connected</h4>
-                    <h4><i class="fa-brands fa-facebook"></i>  <i class="fa-brands fa-twitter"></i>  <i class="fa-brands fa-youtube"></i> <i class="fa-brands fa-instagram"></i></h4>
+                    <h4><i className="fa-brands fa-facebook"></i>  <i className="fa-brands fa-twitter"></i>  <i className="fa-brands fa-youtube"></i> <i className="fa-brands fa-instagram"></i> <i className="fa-brands fa-pinterest"></i></h4>
                 </div>
             </div>
             <div >
@@ -23,12 +23,13 @@ const Footer = () => {
             <div className='mt-5 text-white'>
                 <h2>Contact Us</h2>
                 <ul >
-                    <li><i class="fa-solid fa-location-dot"></i> Bannai Condominium, House #10, <br /> road #12, Dhaka.</li>
-                    <li><i class="fa-solid fa-location-arrow"></i> Get direction on google map</li>
-                    <li><i class="fa-solid fa-envelope"></i> travellofun@gmail.com</li>
+                    <li><i className="fa-solid fa-location-dot"></i> Bannai Condominium, House #10, <br /> road #12, Dhaka.</li>
+                    <li><i className="fa-solid fa-location-arrow"></i> Get direction on google map</li>
+                    <li><i className="fa-solid fa-envelope"></i> travellofun@gmail.com</li>
                 </ul>
 
             </div>
+            <small className='text-white'>Copyright @ 2022. Travelofun . All rights reserved.</small>
         </div>
     );
 };
