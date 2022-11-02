@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 
 const Register = () => {
     const [agree, setAgree] = useState(false);
@@ -19,6 +20,9 @@ const Register = () => {
     const navigate = useNavigate();
     const navigateLogin = () => {
         navigate('/login');
+    }
+    if (loading ||updating) {
+        return <Loading></Loading>
     }
     if (user) {
         navigate('/home');
