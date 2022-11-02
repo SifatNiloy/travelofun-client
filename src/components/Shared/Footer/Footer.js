@@ -2,9 +2,8 @@ import React from 'react';
 import './Footer.css'
 const Footer = () => {
     return (
-        <div className='mt-5 footer footer-background'>
-
-            <div className='mt-5 text-white'>
+        <div className='mt-5 footer footer-background'>           
+            <div className='mt-5 ms-5 ps-5 text-white'>
                 <div>
                     <h4>Stay Connected</h4>
                     <h4><i className="fa-brands fa-facebook"></i>  <i className="fa-brands fa-twitter"></i>  <i className="fa-brands fa-youtube"></i> <i className="fa-brands fa-instagram"></i> <i className="fa-brands fa-pinterest"></i></h4>
@@ -21,7 +20,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='mt-5 text-white'>
-                <h2>Contact Us</h2>
+                <h2 className='ps-4'>Contact Us</h2>
                 <ul >
                     <li><i className="fa-solid fa-location-dot"></i> Bannai Condominium, House #10, <br /> road #12, Dhaka.</li>
                     <li><i className="fa-solid fa-location-arrow"></i> Get direction on google map</li>
@@ -29,8 +28,10 @@ const Footer = () => {
                 </ul>
 
             </div>
-            <small className='text-white'>Copyright @ 2022. Travelofun . All rights reserved.</small>
+            <p className='text-white text-center mx-auto pb-1'>Copyright @ 2022. Travelofun . All rights reserved.</p>
         </div>
+        
+        
     );
 };
 

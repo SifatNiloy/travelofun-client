@@ -13,22 +13,18 @@ const Package = ({ singlePackage }) => {
             <Card.Img variant="top" src={image} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
-                <Card.Text>
+                <Card.Text >
                     Some quick example text to build on the card title and make up the
                     bulk of the card's content.
                 </Card.Text>
             </Card.Body>
 
-            <Card.Body className='card-footer'>
+            <Card.Body className='card-footer text-center'>
                 <p >price: {price} </p>
-                <Card.Link className='btn btn-primary' onClick={() => navigateToServiceDetail(id)}>Book now</Card.Link>
+                <Card.Link className='btn btn-primary ' onClick={() => navigateToServiceDetail(id)}>Book now</Card.Link>
             </Card.Body>
         </Card>
-        // <div>
-        //     <h2>Place:  {name}</h2>
-        //     <img src={image} alt="" />
-        //     <h2>Place:  {price}</h2>
-        // </div>
+        
     );
 };
 

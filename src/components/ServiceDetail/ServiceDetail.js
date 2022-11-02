@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 const ServiceDetail = () => {
     const { packageId } = useParams();
     return (
-        <div>
+        <div className='text-center my-5 py-5'>
             <h2>This is service Detail :{packageId} </h2>
 
             <div>

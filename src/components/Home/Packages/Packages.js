@@ -10,7 +10,7 @@ const Packages = () => {
     })
     return (
         <div>
-            <h2 className='my-5'>Our Packages</h2>
+            <h2 className='my-5 text-center'>Our Packages</h2>
             <div className='container'>
                 <div className='package-container '>
                     {

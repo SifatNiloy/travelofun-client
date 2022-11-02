@@ -2,7 +2,7 @@ import React from 'react';
 
 const Checkout = () => {
     return (
-        <div>
+        <div className='text-center my-5'>
             <h2>This is checkout</h2>
         </div>
     );

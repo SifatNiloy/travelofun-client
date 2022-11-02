@@ -13,6 +13,8 @@ import Offers from './components/Home/Offers/Offers';
 import ServiceDetail from './components/ServiceDetail/ServiceDetail';
 import Checkout from './components/Checkout/Checkout';
 import NotFound from './components/Shared/NotFound/NotFound';
+import RequireAuth from './components/Login/RequireAuth/RequireAuth';
+
 
 
 function App() {
@@ -29,7 +31,11 @@ function App() {
         <Route path='/offers' element={<Offers></Offers>}></Route>
         <Route path='/login' element={<Login></Login>}>Login</Route>
         <Route path='/register' element={<Register></Register>}>Register</Route>
-        <Route path='/checkout' element={<Checkout></Checkout>}></Route>
+        <Route path='/checkout' element={
+          <RequireAuth>
+            <Checkout></Checkout>
+          </RequireAuth>
+        }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
