@@ -14,6 +14,8 @@ import ServiceDetail from './components/ServiceDetail/ServiceDetail';
 import Checkout from './components/Checkout/Checkout';
 import NotFound from './components/Shared/NotFound/NotFound';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
+import AddPackage from './components/About/AddPackage/AddPackage';
+import ManagePackages from './components/ManagePackages/ManagePackages';
 
 
 
@@ -36,6 +38,12 @@ function App() {
             <Checkout></Checkout>
           </RequireAuth>
         }></Route>
+        <Route path='/manage' element={
+          <RequireAuth>
+            <ManagePackages></ManagePackages>
+          </RequireAuth>
+        }></Route>
+        <Route path='/addpackage' element={<AddPackage></AddPackage>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

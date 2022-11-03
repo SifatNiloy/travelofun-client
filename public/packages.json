@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Paris",
+        "image": "https://i.ibb.co/4KN11Pp/paris.jpg",
+        "duration":"2 day 3 night",
+        "description":"Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. ",
+        "price": "2000$"
+    },
+    {
+        "id": 2,
+        "name": "Machu Pichu",
+        "image": "https://i.ibb.co/rGWFZHC/machupichu.jpg",
+        "duration":"2 day 1 night",
+        "description":"Machu Picchu is an Incan citadel set high in the Andes Mountains in Peru, above the Urubamba River valley. ",
+        "price": "2500$"
+    },
+    {
+        "id": 3,
+        "name": "Tahiti",
+        "image": "https://i.ibb.co/d7bkFjq/tahiti.jpg",
+        "duration":"4 day 3 night",
+        "description":"Tahiti is the largest island in French Polynesia, the South Pacific archipelago. ",
+        "price": "1500$"
+    },
+    {
+        "id": 4,
+        "name": "Alberta",
+        "image": "https://i.ibb.co/r2vR2sh/alberta.jpg",
+        "duration":"7 day 6 night",
+        "description":"Alberta is a province in Western Canada. Its landscape encompasses mountains, prairies, desert badlands and vast coniferous forests. ",
+        "price": "5000$"
+    },
+    {
+        "id": 5,
+        "name": "Rome",
+        "image": "https://i.ibb.co/M7Fr85S/rome.jpg",
+        "duration":"3 day 2 night",
+        "description":"Rome is the capital city of Italy. It is also the capital of the Lazio region, the centre of the Metropolitan City of Rome.",
+        "price": "2500$"
+    },
+    {
+        "id": 6,
+        "name": "Tokyo",
+        "image": "https://i.ibb.co/XJBZYsb/tokyo.jpg",
+        "duration":"4 day 3 night",
+        "description":"Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. ",
+        "price": "1800$"
+    },
+    {
+        "id": 7,
+        "name": "Maldives",
+        "image": "https://i.ibb.co/FnMQpK5/maldives.jpg",
+        "duration":"2 day 3 night",
+        "description":"Maldives, officially the Republic of Maldives, is an archipelagic state located in South Asia, situated in the Indian Ocean. ",
+        "price": "1000$"
+    },
+    {
+        "id": 8,
+        "name": "Bali",
+        "image": "https://i.ibb.co/SNmmnpY/bali.jpg",
+        "duration":"4 day 3 night",
+        "description":"Bali is a province of Indonesia and the westernmost of the Lesser Sunda Islands. ",
+        "price": "3000$"
+    },
+    {
+        "id": 9,
+        "name": "New York",
+        "image": "https://i.ibb.co/ykdcXvH/newyork.jpg",
+        "duration":"5 day 4 night",
+        "description":"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean.",
+        "price": "5000$"
+    }
+]
