@@ -10,12 +10,12 @@ import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
 import Blog from './components/Home/Blog/Blog';
 import Offers from './components/Home/Offers/Offers';
-import ServiceDetail from './components/ServiceDetail/ServiceDetail';
 import Checkout from './components/Checkout/Checkout';
 import NotFound from './components/Shared/NotFound/NotFound';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import AddPackage from './components/About/AddPackage/AddPackage';
 import ManagePackages from './components/ManagePackages/ManagePackages';
+import Booking from './components/Booking/Booking';
 
 
 
@@ -27,7 +27,7 @@ function App() {
         <Route path='/' element={<Home></Home>}>Home</Route>
         <Route path='/home' element={<Home></Home>}>Home</Route>
         <Route path='/packages' element={<Packages></Packages>}></Route>
-        <Route path='/package/:packageId' element={<ServiceDetail></ServiceDetail>}></Route>
+        <Route path='/package/:packageId' element={<Booking></Booking>}></Route>
         <Route path='/about' element={<About></About>}>About</Route>
         <Route path='/blog' element={<Blog></Blog>}>About</Route>
         <Route path='/offers' element={<Offers></Offers>}></Route>

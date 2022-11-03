@@ -7,7 +7,7 @@ const usePackages=()=>{
             .then(res => res.json())
             .then(data => setPackages(data))
     });
-    return [packages];
+    return [packages, setPackages];
 }
 
 export default usePackages;

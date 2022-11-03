@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 const AddPackage = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
         const url = `http://localhost:5000/package`;
@@ -16,6 +16,9 @@ const AddPackage = () => {
         .then(result=>{
             console.log(result)
         })
+        reset();
+        alert('added successfully');
+        
     };
     return (
         <div className='my-5 py-5 w-50 mx-auto'>
