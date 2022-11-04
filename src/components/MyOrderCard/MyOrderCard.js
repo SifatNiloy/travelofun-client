@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
-const MyOrderCard = ({order}) => {
-    const {_id, packagename, image, description, price, duration, status } = order;
+const MyOrderCard = ({ order }) => {
+    const { _id, packagename, image, description, price, duration, status } = order;
     return (
         <div>
             <Card style={{ width: '22rem' }}>
@@ -20,7 +20,7 @@ const MyOrderCard = ({order}) => {
                         <h4 >{duration} </h4>
                         <h4 >{status} </h4>
                     </div>
-                    
+
                 </Card.Body>
             </Card>
         </div>

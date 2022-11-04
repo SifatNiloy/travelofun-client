@@ -14,17 +14,17 @@ const ManagePackages = () => {
             .then(res=>res.json())
             .then(data=>{
                 // console.log(data);
-                const remaining= packages.filter(singlepackage=> singlepackage._id !== id);
+                const remaining= packages.filter(singlePackage=> singlePackage._id !== id);
                 setPackages(remaining);
             })
         }
     }
     return (
         <div className='w-50 mx-auto my-5'>
-            <h2>Mange Your Packages</h2>
+            <h2>Mange Your packages</h2>
             {
-                packages.map(singlepackage => <div key={singlepackage._id}>
-                    <h4>{singlepackage.name} <button onClick={() => handleDelete(singlepackage._id)}>Delete</button></h4>
+                packages.map(singlePackage => <div key={singlePackage._id}>
+                    <h4>{singlePackage.name} <button onClick={() => handleDelete(singlePackage._id)}>Delete</button></h4>
                 </div>)
             }
         </div>

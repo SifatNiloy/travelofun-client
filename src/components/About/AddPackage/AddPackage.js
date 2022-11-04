@@ -4,7 +4,7 @@ const AddPackage = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/package`;
+        const url = `http://localhost:5000/pack`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -22,7 +22,7 @@ const AddPackage = () => {
     };
     return (
         <div className='my-5 py-5 w-50 mx-auto'>
-            <h2>Add new package</h2>
+            <h2>Add new pack</h2>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input placeholder='name' className='mb-2' {...register("name", { required: true, maxLength: 20 })} />
                 <textarea placeholder='description' className='mb-2' {...register("description")} />
@@ -31,7 +31,7 @@ const AddPackage = () => {
                 <input placeholder='photo url' className='mb-2' type="text" {...register("image")} />
 
 
-                <input type="submit" value="Add Package" />
+                <input type="submit" value="Add pack" />
             </form>
         </div>
     );

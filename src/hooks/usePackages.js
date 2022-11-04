@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
 const usePackages=()=>{
-    const [packages, setPackages] = useState([]);
+    const [packages, setpackages] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/package')
             .then(res => res.json())
-            .then(data => setPackages(data))
+            .then(data => setpackages(data))
     });
-    return [packages, setPackages];
+    return [packages, setpackages];
 }
 
 export default usePackages;

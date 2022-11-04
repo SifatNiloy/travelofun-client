@@ -4,7 +4,6 @@ import Header from './components/Shared/Header/Header';
 import Footer from './components/Shared/Footer/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home/Home';
-import Packages from './components/Home/Packages/Packages';
 import About from './components/About/About';
 import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
@@ -12,11 +11,11 @@ import Blog from './components/Home/Blog/Blog';
 import Offers from './components/Home/Offers/Offers';
 import NotFound from './components/Shared/NotFound/NotFound';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
-import AddPackage from './components/About/AddPackage/AddPackage';
-import ManagePackages from './components/ManagePackages/ManagePackages';
 import Booking from './components/Booking/Booking';
 import Orders from './components/Orders/Orders';
 import MyOrders from './components/MyOrders/MyOrders';
+import ManagePackages from './components/ManagePackages/ManagePackages';
+import AddPackage from './components/About/AddPackage/AddPackage';
 
 
 
@@ -27,7 +26,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}>Home</Route>
         <Route path='/home' element={<Home></Home>}>Home</Route>
-        <Route path='/package' element={<Packages></Packages>}></Route>
+        <Route path='/package' element={<packages></packages>}></Route>
         <Route path='/package/:packageId' element={
           <RequireAuth>
             <Booking></Booking>
