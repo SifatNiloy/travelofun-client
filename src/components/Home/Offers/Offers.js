@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import './Offers.css'
+import backpack from '../../../images/products/backpack.jpg'
+import BudgetTravel from '../../BudgetTravel/BudgetTravel';
 const Offers = () => {
     return (
-        <div className=''>
+        <div className='offer-page py-4'>
             <h2 className='text-center mt-5'>Offers</h2>
             <div >
                 <h3 className='ms-5'>We offer discount in various occasion and off seasons. </h3>
@@ -16,22 +18,29 @@ const Offers = () => {
                         </div>
                     </div>
                 </div>
-                <h3 className='container'>Order products from us and get special discount</h3>
-                <div className='container'>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="holder.js/100px180" />
-                        <Card.Body>
-                            <Card.Title>Backpack</Card.Title>
-                            <Card.Text>
-                                <p>Price:10$</p>
-                            </Card.Text>
-                            <Button variant="primary">Buy now</Button>
-                        </Card.Body>
-                    </Card>
+                <div>
+                    <h2 className='m-5'>Get special discount on every season </h2>
+                    <BudgetTravel></BudgetTravel>
+
 
                 </div>
             </div>
+            <h3 className='container my-5'>Order products from us and get special discount</h3>
+            <div className='container'>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={backpack} />
+                    <Card.Body>
+                        <Card.Title>Backpack</Card.Title>
+                        <Card.Text>
+                            <p>Price:30$</p>
+                        </Card.Text>
+                        <Button variant="primary">Buy now</Button>
+                    </Card.Body>
+                </Card>
+
+            </div>
         </div>
+        
     );
 };
 

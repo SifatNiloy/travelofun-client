@@ -15,7 +15,7 @@ import Booking from './components/Booking/Booking';
 import Orders from './components/Orders/Orders';
 import MyOrders from './components/MyOrders/MyOrders';
 import ManagePackages from './components/ManagePackages/ManagePackages';
-import AddPackage from './components/About/AddPackage/AddPackage';
+import AddPackage from './components/AddPackage/AddPackage';
 import Packages from './components/Home/Packages/Packages';
 
 

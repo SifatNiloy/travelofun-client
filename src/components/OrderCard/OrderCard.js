@@ -16,6 +16,7 @@ const OrderCard = ({ order }) => {
             },
             body: JSON.stringify(order),
         }).then(console.log(order));
+        // window.location.reload(false);
     };
     
     function buttonChange(){
@@ -25,8 +26,10 @@ const OrderCard = ({ order }) => {
             
         }
         else{
-            const cardFooterStatus='approved';
+            
+            const cardFooterStatus=<h4><i class="fa-solid fa-circle-check"></i> &nbsp;approved</h4>;
             return cardFooterStatus;
+
         }
     }
     const cardbutton=buttonChange();
@@ -48,7 +51,7 @@ const OrderCard = ({ order }) => {
                         <h4 >{duration} </h4>
                     </div>
                     <div className='card-footer-package '>
-                        <h4 >  </h4>
+                        <h4 > </h4>
                         <h4>{cardbutton} </h4>
                         {/* <button onClick={updatePackage} className='btn btn-primary'>{status}</button> */}
                     </div>

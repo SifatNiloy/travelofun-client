@@ -3,6 +3,8 @@ import React from 'react';
 const About = () => {
     return (
         <div className='ps-5 ms-5 '>
+            <h1 className='text-center'>About us</h1>
+            <p className='mb-3'>we are provider of travel management services on a global scale. It differ in terms of their size and scale, as well as the services that are on offer. We support those companies and organizations that engage in international travel and need professional help.</p>
             <h1 className='w-50 text-warning my-5'>FAQ</h1>
             <h3>What are online travel agencies?</h3>
             <p>An Online Travel Agency (OTA) is a website that sells services related to travel. It enables customers to make hotel and travel reservations from one single platform. They're the digital equivalent of a travel agent.
@@ -26,14 +28,8 @@ const About = () => {
                 <li>All your travel in one place</li>
                 <li>Local flights and deals</li>
                 <li> Rewards programs</li>
-            </ul>
-           
-            
-            
-            
-            
-           
-            Thes benefits are why OTAs are so popular with travelers worldwide, and why you want to consider finding the one that works best for you. </p>
+            </ul>           
+            These benefits are why OTAs are so popular with travelers worldwide, and why you want to consider finding the one that works best for you. </p>
         </div>
     );
 };

@@ -10,8 +10,8 @@ const Banner = () => {
                 <img src={ballon} alt="" />
                 <Carousel.Caption className='pb-5 mb-5'>
                     <div className='pb-5 mb-5'>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h1 className='fw-bold display-4'>Air Balloon Rides</h1>
+                        <p>Ride Ballon from above the landscape, enjoy the sunset</p>
                     </div>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -20,8 +20,8 @@ const Banner = () => {
 
                 <Carousel.Caption className='pb-5 mb-5'>
                     <div className='pb-5 mb-5'>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h1 className='fw-bold display-4'>Explore Famous cities</h1>
+                        <p>Explore famous cities, meet new people, new culture</p>
                     </div>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -30,9 +30,9 @@ const Banner = () => {
 
                 <Carousel.Caption className='pb-5 mb-5'>
                     <div className='pb-5 mb-5'>
-                        <h3>Third slide label</h3>
+                        <h1 className='fw-bold display-4'>See Great Architectures</h1>
                         <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                            Great Building Architectures created my mankind
                         </p>
                     </div>
                 </Carousel.Caption>
