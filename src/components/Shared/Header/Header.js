@@ -26,13 +26,15 @@ const Header = () => {
 
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">My Orders</Nav.Link>
+                       
                         
                         {
                             user&& <>
                             <Nav.Link as={Link} to="/addpackage">Add</Nav.Link>
                             {/* <Nav.Link as={Link} to="/managepackages">Manage all Orders</Nav.Link> */}
+                            <Nav.Link as={Link} to="/myorders">My Orders</Nav.Link>
                             <Nav.Link as={Link} to="/manageorders">Manage all Orders</Nav.Link>
+                            
                             </>
                         }
                         {

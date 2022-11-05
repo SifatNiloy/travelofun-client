@@ -16,6 +16,7 @@ import AddPackage from './components/About/AddPackage/AddPackage';
 import ManagePackages from './components/ManagePackages/ManagePackages';
 import Booking from './components/Booking/Booking';
 import Orders from './components/Orders/Orders';
+import MyOrders from './components/MyOrders/MyOrders';
 
 
 
@@ -45,6 +46,11 @@ function App() {
         <Route path='/manageorders' element={
           <RequireAuth>
             <Orders></Orders>
+          </RequireAuth>
+        }></Route>
+        <Route path='/myorders' element={
+          <RequireAuth>
+            <MyOrders></MyOrders>
           </RequireAuth>
         }></Route>
         <Route path='/addpackage' element={<AddPackage></AddPackage>}></Route>

@@ -26,6 +26,7 @@ const Booking = () => {
             packageId:packageId,
             address:event.target.address.value,
             phone:event.target.phone.value,
+            status:"pending",
 
         }
         axios.post('http://localhost:5000/order', order)
