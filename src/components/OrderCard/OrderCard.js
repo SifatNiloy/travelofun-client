@@ -20,7 +20,7 @@ const OrderCard = ({ order }) => {
     
     function buttonChange(){
         if(status==="pending"){           
-            const cardFooterStatus=<button onClick={()=>updatePackage} className='btn btn-primary'>{status}</button>
+            const cardFooterStatus=<button onClick={updatePackage} className='btn btn-primary'>{status}</button>
             return cardFooterStatus;
             
         }

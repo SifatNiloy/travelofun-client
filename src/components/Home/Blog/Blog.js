@@ -12,11 +12,26 @@ const Blog = () => {
                 <h2 className='text-center py-4 text-success'>DISCOVER YOUR AUSTRALIA</h2>
                 <p>Looking for places to visit in Australia and how to make it the dream trip of a lifetime?
 
-                Australia IS everything you've dreamed of and more. It's a land of colors and contrasts: from the red, dusty outback to the lush, tropical rainforests, with moutains, vineyards, and the most beautiful beaches in the world in between.</p>
+                    Australia IS everything you've dreamed of and more. It's a land of colors and contrasts: from the red, dusty outback to the lush, tropical rainforests, with moutains, vineyards, and the most beautiful beaches in the world in between.</p>
                 <div className='text-center'>
                     <img className='w-75 my-2' src={bird} alt="" /><br />
                     <img className='w-75 my-2' src={sydney} alt="" />
                 </div>
+                <h2>Travel Industry Trends and Stats</h2>
+                <p>
+                    <ul>
+                        <li>Convenient booking remains the biggest trend in the global travel industry.ul</li>
+                        <li>Solo Travel: Leisure travel is no longer just a family affair.
+                            The travel and tourism industry generated 10.4 percent of all global economic activity last year.</li>
+                        <li> The travel industry is the second-fastest-growing sector in the world, ahead of healthcare (+3.1%), information technology (+1.7%) and financial services (+1.7%), and behind only manufacturing.</li>
+                        <li> Last year, travel and tourism increased its share of leisure spending to 78.5 percent.</li>
+                        <li>Three in five travel companies say they offer customer service via chat.</li>
+                    </ul>
+
+                    <h1>The Best Hotel Booking Sites</h1>
+                    <h4>We recommend using Booking.com for hotel reservations</h4>
+
+                </p>
             </p>
         </div>
     );

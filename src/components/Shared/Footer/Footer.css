@@ -8,6 +8,9 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-ul {
+.footer-ul {
     list-style-type: none;
+}
+.media-button{
+    cursor: pointer;
 }
