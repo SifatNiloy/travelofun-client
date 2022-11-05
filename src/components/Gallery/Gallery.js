@@ -11,7 +11,7 @@ const Gallery = () => {
     return (
         <div className='container'>
             <h2 className='text-center my-4 p-3'>GALLERY OF OUR TOURISTS</h2>
-            <div className='gallary'>
+            <div className='gallary '>
                 <img className='tourist-img' src={tourist1} alt="" />
                 <img className='tourist-img' src={tourist2} alt="" />
                 <img className='tourist-img' src={tourist3} alt="" />

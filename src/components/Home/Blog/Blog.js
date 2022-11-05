@@ -28,9 +28,7 @@ const Blog = () => {
                         <li>Three in five travel companies say they offer customer service via chat.</li>
                     </ul>
 
-                    <h1>The Best Hotel Booking Sites</h1>
-                    <h4>We recommend using Booking.com for hotel reservations</h4>
-
+                    
                 </p>
             </p>
         </div>

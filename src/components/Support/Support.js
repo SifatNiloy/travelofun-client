@@ -3,7 +3,7 @@ import './Support.css'
 import support from '../../../src/images/others/support.jpg'
 const Support = () => {
     return (
-        <div className=' container'>
+        <div className=' container mt-5'>
             <h1 className='text-center'>Customer Support</h1>
             <div className='support'>
                 <div className='mt-5 pt-5'>

@@ -19,7 +19,7 @@ const Packages = () => {
         <div>
             <h2 className='my-5 text-center'>Our packages</h2>
             <div className='container'>
-                <div className='package-container '>
+                <div className='package-container row'>
                     {
                         packages.map(singlePackage => <Package key={singlePackage._id} singlePackage={singlePackage}></Package>)
                     }

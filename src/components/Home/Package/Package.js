@@ -9,7 +9,8 @@ const Package = ({ singlePackage }) => {
         navigate(`/package/${id}`)
     }
     return (
-        <Card style={{ width: '22rem' }}>
+        <div >
+            <Card className='col-sm-12 col-md-6 col-lg-4' style={{ width: '22rem' }}>
             <Card.Img variant="top" src={image} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
@@ -26,6 +27,7 @@ const Package = ({ singlePackage }) => {
                 <Card.Link className='btn btn-primary ' onClick={() => navigateToServiceDetail(_id)}>Book now</Card.Link>
             </Card.Body>
         </Card>
+        </div>
 
     );
 };
