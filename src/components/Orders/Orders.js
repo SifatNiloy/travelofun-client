@@ -11,6 +11,7 @@ const Orders = () => {
             const url=`http://localhost:5000/order`;
             const {data}= await axios.get(url);
             setOrders(data);
+            
         }
         getOrders();
         // console.log(orders)

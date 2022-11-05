@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Card } from 'react-bootstrap';
 
 const OrderCard = ({ order }) => {
-    let { _id, email, packagename, image, description, price, duration, status } = order;
-
+    let { _id, packagename, image, description, price, duration, status } = order;
+  
     // Change status and update data from database function
-    const updatePackage = event => {
+    const updatePackage = id => {
         
-        event.preventDefault();
         order.status = "approved";
-        const url = `http://localhost:5000/package/${_id}`;
+        const url = `http://localhost:5000/order/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {
@@ -18,9 +17,22 @@ const OrderCard = ({ order }) => {
             body: JSON.stringify(order),
         }).then();
     };
+    
+    function buttonChange(){
+        if(status==="pending"){           
+            const cardFooterStatus=<button onClick={()=>updatePackage(order._id)} className='btn btn-primary'>{status}</button>
+            return cardFooterStatus;
+            
+        }
+        else{
+            const cardFooterStatus='approved';
+            return cardFooterStatus;
+        }
+    }
+    const cardbutton=buttonChange();
     return (
         <div>
-            {/* <h1>this is order:{email} </h1> */}
+            
             <Card style={{ width: '22rem' }}>
                 <Card.Img variant="top" src={image} />
                 <Card.Body>
@@ -37,7 +49,8 @@ const OrderCard = ({ order }) => {
                     </div>
                     <div className='card-footer-package '>
                         <h4 >  </h4>
-                        <button onClick={() => updatePackage(_id)} className='btn btn-primary'>{status}</button>
+                        <h4>{cardbutton} </h4>
+                        {/* <button onClick={updatePackage} className='btn btn-primary'>{status}</button> */}
                     </div>
 
                 </Card.Body>
