@@ -12,9 +12,10 @@ const Orders = () => {
             const {data}= await axios.get(url);
             setOrders(data);
             
+           
         }
         getOrders();
-        // console.log(orders)
+        
     },[])
     return (
         <div >

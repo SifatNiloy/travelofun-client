@@ -1,12 +1,19 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Package from '../Package/Package';
 import './Packages.css';
 const Packages = () => {
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/package')
-            .then(res => res.json())
-            .then(data => setPackages(data))
+        const getPackages=async()=>{
+            const url=`http://localhost:5000/package`;
+            const {data}= await axios.get(url);
+            setPackages(data);
+        }
+        getPackages();
+        // fetch('http://localhost:5000/package')
+        //     .then(res => res.json())
+        //     .then(data => setPackages(data))
     })
     return (
         <div>

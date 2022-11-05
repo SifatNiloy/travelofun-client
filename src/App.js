@@ -16,6 +16,7 @@ import Orders from './components/Orders/Orders';
 import MyOrders from './components/MyOrders/MyOrders';
 import ManagePackages from './components/ManagePackages/ManagePackages';
 import AddPackage from './components/About/AddPackage/AddPackage';
+import Packages from './components/Home/Packages/Packages';
 
 
 
@@ -26,7 +27,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}>Home</Route>
         <Route path='/home' element={<Home></Home>}>Home</Route>
-        <Route path='/package' element={<packages></packages>}></Route>
+        <Route path='/packages' element={<Packages></Packages>}></Route>
         <Route path='/package/:packageId' element={
           <RequireAuth>
             <Booking></Booking>

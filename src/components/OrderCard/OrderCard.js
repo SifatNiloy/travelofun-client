@@ -5,22 +5,22 @@ const OrderCard = ({ order }) => {
     let { _id, packagename, image, description, price, duration, status } = order;
   
     // Change status and update data from database function
-    const updatePackage = id => {
+    const updatePackage =id => {
         
         order.status = "approved";
-        const url = `http://localhost:5000/order/${id}`;
+        const url = `http://localhost:5000/order/${_id}`;
         fetch(url, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
             },
             body: JSON.stringify(order),
-        }).then();
+        }).then(console.log(order));
     };
     
     function buttonChange(){
         if(status==="pending"){           
-            const cardFooterStatus=<button onClick={()=>updatePackage(order._id)} className='btn btn-primary'>{status}</button>
+            const cardFooterStatus=<button onClick={()=>updatePackage} className='btn btn-primary'>{status}</button>
             return cardFooterStatus;
             
         }
