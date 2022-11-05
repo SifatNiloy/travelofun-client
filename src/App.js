@@ -10,12 +10,12 @@ import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
 import Blog from './components/Home/Blog/Blog';
 import Offers from './components/Home/Offers/Offers';
-import Checkout from './components/Checkout/Checkout';
 import NotFound from './components/Shared/NotFound/NotFound';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import AddPackage from './components/About/AddPackage/AddPackage';
 import ManagePackages from './components/ManagePackages/ManagePackages';
 import Booking from './components/Booking/Booking';
+import Orders from './components/Orders/Orders';
 
 
 
@@ -26,21 +26,25 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}>Home</Route>
         <Route path='/home' element={<Home></Home>}>Home</Route>
-        <Route path='/packages' element={<Packages></Packages>}></Route>
-        <Route path='/package/:packageId' element={<Booking></Booking>}></Route>
+        <Route path='/package' element={<Packages></Packages>}></Route>
+        <Route path='/package/:packageId' element={
+          <RequireAuth>
+            <Booking></Booking>
+          </RequireAuth>
+        }></Route>
         <Route path='/about' element={<About></About>}>About</Route>
         <Route path='/blog' element={<Blog></Blog>}>About</Route>
         <Route path='/offers' element={<Offers></Offers>}></Route>
         <Route path='/login' element={<Login></Login>}>Login</Route>
         <Route path='/register' element={<Register></Register>}>Register</Route>
-        <Route path='/checkout' element={
-          <RequireAuth>
-            <Checkout></Checkout>
-          </RequireAuth>
-        }></Route>
-        <Route path='/manage' element={
+        <Route path='/managepackages' element={
           <RequireAuth>
             <ManagePackages></ManagePackages>
+          </RequireAuth>
+        }></Route>
+        <Route path='/manageorders' element={
+          <RequireAuth>
+            <Orders></Orders>
           </RequireAuth>
         }></Route>
         <Route path='/addpackage' element={<AddPackage></AddPackage>}></Route>
