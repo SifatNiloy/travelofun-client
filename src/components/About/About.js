@@ -1,11 +1,13 @@
 import React from 'react';
+import Support from '../Support/Support';
 import './About.css'
 const About = () => {
     return (
         <div className=' container'>
-            <h1 className='text-center'>About us</h1>
+            <h1 className='text-center mt-5'>About us</h1>
             <p className='mb-3 about-us'>We are a private retailer or public service that provides travel and tourism-related services to the general public on behalf of accommodation or travel suppliers to offer different kinds of travelling packages for each destination. We provide travel management services on a global scale. It differ in terms of their size and scale, as well as the services that are on offer. We support those companies and organizations that engage in international travel and need professional help.</p>
-            <h1 className='w-50 text-warning my-5'>FAQ</h1>
+            <Support></Support>
+            <h1 className='w-50 text-warning mb-5'>FAQ</h1>
             <h3>What are online travel agencies?</h3>
             <p>An Online Travel Agency (OTA) is a website that sells services related to travel. It enables customers to make hotel and travel reservations from one single platform. They're the digital equivalent of a travel agent.
 

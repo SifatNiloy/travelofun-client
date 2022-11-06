@@ -20,8 +20,8 @@ const Package = ({ singlePackage }) => {
                 </Card.Body>
 
                 <Card.Body className='card-footer text-center'>
-                    <div className='card-footer-package '>
-                        <h4 > {price} </h4>
+                    <div className='card-package-footer '>
+                        <h4 className='price-button'> {price} </h4>
                         <h4 >{duration} </h4>
                     </div>
                     <Card.Link className='btn btn-primary ' onClick={() => navigateToServiceDetail(_id)}>Book now</Card.Link>

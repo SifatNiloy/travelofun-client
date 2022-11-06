@@ -1,5 +1,5 @@
 .card-footer {
-    background-color: rgb(69, 226, 174);
+    background-color: #85dcb8;
 }
 
 /* .price {
@@ -16,3 +16,11 @@
     
 }
 
+.card-package-footer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    color: #1966c4;
+}
+.price-button{
+    color: #05386b;
+}

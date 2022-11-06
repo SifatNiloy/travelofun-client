@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Footer.css'
 const Footer = () => {
     return (
-        <div className='mt-5  footer-background'>
+        <div className=' footer-background'>
             <div className='container'>
                 <div className=' row '>
 

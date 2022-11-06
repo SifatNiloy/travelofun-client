@@ -1,7 +1,9 @@
-.budget-travel{
+/* .budget-travel{
     background-color: rgb(215, 252, 239);
-}
-.offer-season{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    
+} */
+
+.card-color{
+    background-color: #97caef;
+    
 }

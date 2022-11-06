@@ -18,7 +18,23 @@ const OrderCard = ({ order }) => {
         }).then(console.log(order));
         window.location.reload(false);
     };
-    
+    //delete order on button click 
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure you want to delete this package? ');
+        if (proceed) {
+            const url = `http://localhost:5000/order/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                console.log(data);
+                
+            })
+            window.location.reload(false);
+        }
+    }
     function buttonChange(){
         if(status==="pending"){           
             const cardFooterStatus=<button onClick={updatePackage} className='btn btn-primary'>{status}</button>
@@ -51,7 +67,7 @@ const OrderCard = ({ order }) => {
                         <h4 >{duration} </h4>
                     </div>
                     <div className='card-footer-package '>
-                        <h4 > </h4>
+                        <h4 ><button className='btn btn-primary' onClick={()=>handleDelete(_id)}>delete</button> </h4>
                         <h4>{cardbutton} </h4>
                         {/* <button onClick={updatePackage} className='btn btn-primary'>{status}</button> */}
                     </div>
