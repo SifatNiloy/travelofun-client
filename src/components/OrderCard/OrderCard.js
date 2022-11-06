@@ -16,7 +16,7 @@ const OrderCard = ({ order }) => {
             },
             body: JSON.stringify(order),
         }).then(console.log(order));
-        // window.location.reload(false);
+        window.location.reload(false);
     };
     
     function buttonChange(){

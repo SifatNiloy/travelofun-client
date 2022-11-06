@@ -11,13 +11,13 @@ const Gallery = () => {
     return (
         <div className='container'>
             <h2 className='text-center my-4 p-3'>GALLERY OF OUR TOURISTS</h2>
-            <div className='gallary '>
-                <img className='tourist-img' src={tourist1} alt="" />
-                <img className='tourist-img' src={tourist2} alt="" />
-                <img className='tourist-img' src={tourist3} alt="" />
-                <img className='tourist-img' src={tourist4} alt="" />
-                <img className='tourist-img' src={tourist5} alt="" />
-                <img className='tourist-img' src={tourist6} alt="" />
+            <div className='row '>
+                <img className='tourist-img col-sm-12 col-md-6 col-lg-4' src={tourist1} alt="" />
+                <img className='tourist-img col-sm-12 col-md-6 col-lg-4' src={tourist2} alt="" />
+                <img className='tourist-img col-sm-12 col-md-6 col-lg-4' src={tourist3} alt="" />
+                <img className='tourist-img col-sm-12 col-md-6 col-lg-4' src={tourist4} alt="" />
+                <img className='tourist-img col-sm-12 col-md-6 col-lg-4' src={tourist5} alt="" />
+                <img className='tourist-img col-sm-12 col-md-6 col-lg-4' src={tourist6} alt="" />
             </div>
         </div>
     );
