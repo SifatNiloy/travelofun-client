@@ -20,7 +20,7 @@ const Orders = () => {
     return (
         <div >
             <h2 className='text-center my-5'>All Orders: {orders.length}</h2>
-            <div className='container'>
+            <div className='container my-5 py-5'>
                 <div className='package-container '>
                     {
                         orders.map(order=><OrderCard key={order._id} order={order}></OrderCard> )

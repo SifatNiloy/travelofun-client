@@ -4,7 +4,7 @@ const AddPackage = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/pack`;
+        const url = `http://localhost:5000/package`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -26,7 +26,7 @@ const AddPackage = () => {
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input placeholder='name' className='mb-2' {...register("name", { required: true, maxLength: 20 })} />
                 <textarea placeholder='description' className='mb-2' {...register("description")} />
-                <input placeholder='price' className='mb-2' type="number" {...register("price")} />
+                <input placeholder='price' className='mb-2' type="text" {...register("price")} />
                 <input placeholder='duration' className='mb-2' type="text" {...register("duration")} />
                 <input placeholder='photo url' className='mb-2' type="text" {...register("image")} />
 

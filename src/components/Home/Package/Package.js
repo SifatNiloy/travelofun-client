@@ -9,7 +9,7 @@ const Package = ({ singlePackage }) => {
         navigate(`/package/${id}`)
     }
     return (
-        <div className='col-sm-12 col-md-6 col-lg-4'>
+        <div className='col-sm-12 col-md-6 col-lg-4 mb-4'>
             <Card className='' style={{ width: '22rem' }}>
                 <Card.Img variant="top" src={image} />
                 <Card.Body>
