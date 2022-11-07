@@ -1,6 +1,6 @@
 # Doctorseba telemedicine service
 
-[Visit our site](https://travelofun.netlify.app/)
+[Visit our site](https://travelofun-df17a.web.app/)
 
 Server Side Link: [click here](https://github.com/SifatNiloy/travelofun-server)
 
