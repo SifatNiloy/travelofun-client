@@ -9,13 +9,13 @@ const BudgetTravel = () => {
                 <h5 className='text-center text-dark'>An affordable vacation shouldn't feel cheap. We show you how to plan a dream trip that keeps your wallet happy.Get Free Travel Deals in Your Inbox.</h5>
                 <h3 className='mt-5'>Save up to 50% on Hotels</h3>
                 <h5>Use our coupon code and get the deal and get exclusive discounts on everything from 5-star resorts to flights.</h5>
-               
+
 
                 <div>
                     <div >
                         <div className='row'>
                             <Card className='col-sm-12 col-md-6 col-lg-4 card-color mt-5 p-4 me-2' style={{ width: '20rem' }}>
-                               
+
                                 <Card.Body>
                                     <Card.Title className='text-primary'>summer pack</Card.Title>
                                     <Card.Text>
@@ -27,7 +27,7 @@ const BudgetTravel = () => {
                                 </Card.Body>
                             </Card>
                             <Card className='col-sm-12 col-md-6 col-lg-4 card-color mt-5 p-4 me-2' style={{ width: '20rem' }}>
-                                
+
                                 <Card.Body>
                                     <Card.Title className='text-primary'>winter pack</Card.Title>
                                     <Card.Text>
@@ -38,7 +38,7 @@ const BudgetTravel = () => {
                                 </Card.Body>
                             </Card>
                             <Card className='col-sm-12 col-md-6 col-lg-4 card-color mt-5 p-4 me-2' style={{ width: '20rem' }}>
-                                
+
                                 <Card.Body>
                                     <Card.Title className='text-primary'>spring pack</Card.Title>
                                     <Card.Text>
