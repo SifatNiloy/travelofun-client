@@ -8,7 +8,7 @@ const Orders = () => {
     const [orders, setOrders]=useState([]);
     useEffect(()=>{
         const getOrders=async()=>{
-            const url=`http://localhost:5000/order`;
+            const url=`https://secure-shelf-54719.herokuapp.com/order`;
             const {data}= await axios.get(url);
             setOrders(data);
             

@@ -4,7 +4,7 @@ const AddPackage = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/package`;
+        const url = `https://secure-shelf-54719.herokuapp.com/package`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -12,13 +12,13 @@ const AddPackage = () => {
             },
             body: JSON.stringify(data)
         })
-        .then(res=> res.json())
-        .then(result=>{
-            console.log(result)
-        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result)
+            })
         reset();
         alert('added successfully');
-        
+
     };
     return (
         <div className='my-5 py-5 w-50 mx-auto'>

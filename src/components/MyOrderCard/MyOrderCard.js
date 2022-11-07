@@ -7,7 +7,7 @@ const MyOrderCard = ({ order }) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to delete this package? ');
         if (proceed) {
-            const url = `http://localhost:5000/order/${id}`;
+            const url = `https://secure-shelf-54719.herokuapp.com/order/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

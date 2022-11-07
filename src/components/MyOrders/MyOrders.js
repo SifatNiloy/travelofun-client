@@ -11,7 +11,7 @@ const MyOrders = () => {
         const getOrders=async()=>{
             const myemail=user.email;
             console.log(myemail);
-            const url=`http://localhost:5000/order`;
+            const url=`https://secure-shelf-54719.herokuapp.com/order`;
             const {data}= await axios.get(url);
             // console.log(data);
             const mydata=data.filter(allorder=>allorder.email===myemail);

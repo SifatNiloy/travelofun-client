@@ -9,7 +9,7 @@ const Booking = () => {
     const [singlepackage, setSinglepackage] = useState({});
     const [user, loading, error] = useAuthState(auth);
     useEffect(() => {
-        const url = `http://localhost:5000/package/${packageId}`;
+        const url = `https://secure-shelf-54719.herokuapp.com/package/${packageId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setSinglepackage(data));
@@ -29,7 +29,7 @@ const Booking = () => {
             status: "pending",
 
         }
-        axios.post('http://localhost:5000/order', order)
+        axios.post('https://secure-shelf-54719.herokuapp.com/order', order)
             .then(res => {
                 const { data } = res;
                 if (data.insertedId) {
