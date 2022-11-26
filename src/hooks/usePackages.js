@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const usePackages=()=>{
     const [packages, setpackages] = useState([]);
     useEffect(() => {
-        fetch('https://secure-shelf-54719.herokuapp.com/package')
+        fetch('https://travelofun-server.onrender.com')
             .then(res => res.json())
             .then(data => setpackages(data))
     });

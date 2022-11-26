@@ -4,7 +4,7 @@ const AddPackage = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `https://secure-shelf-54719.herokuapp.com/package`;
+        const url = `https://travelofun-server.onrender.com`;
         fetch(url, {
             method: 'POST',
             headers: {

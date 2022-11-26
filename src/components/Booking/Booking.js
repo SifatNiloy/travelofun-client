@@ -9,7 +9,7 @@ const Booking = () => {
     const [singlepackage, setSinglepackage] = useState({});
     const [user, loading, error] = useAuthState(auth);
     useEffect(() => {
-        const url = `https://secure-shelf-54719.herokuapp.com/package/${packageId}`;
+        const url = `https://travelofun-server.onrender.com/${packageId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setSinglepackage(data));

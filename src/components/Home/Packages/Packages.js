@@ -6,12 +6,12 @@ const Packages = () => {
     const [packages, setPackages] = useState([]);
     useEffect(() => {
         const getPackages=async()=>{
-            const url=`https://secure-shelf-54719.herokuapp.com/package`;
+            const url=`https://travelofun-server.onrender.com`;
             const {data}= await axios.get(url);
             setPackages(data);
         }
         getPackages();
-        // fetch('https://secure-shelf-54719.herokuapp.com/package')
+        // fetch('https://travelofun-server.onrender.com')
         //     .then(res => res.json())
         //     .then(data => setPackages(data))
     })

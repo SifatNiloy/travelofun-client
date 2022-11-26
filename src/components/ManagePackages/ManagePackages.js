@@ -7,7 +7,7 @@ const ManagePackages = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to delete this package? ');
         if (proceed) {
-            const url = `https://secure-shelf-54719.herokuapp.com/package/${id}`;
+            const url = `https://travelofun-server.onrender.com/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
