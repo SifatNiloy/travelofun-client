@@ -28,14 +28,12 @@ const Booking = () => {
       phone: event.target.phone.value,
       status: "pending",
     };
-    axios
-      .post("https://secure-shelf-54719.herokuapp.com/order", order)
-      .then((res) => {
-        const { data } = res;
-        if (data.insertedId) {
-          alert("your order is booked ");
-        }
-      });
+    axios.post("http://localhost:5000/order", order).then((res) => {
+      const { data } = res;
+      if (data.insertedId) {
+        alert("your order is booked ");
+      }
+    });
   };
   return (
     <div className="text-center py-5 details">
