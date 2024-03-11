@@ -46,7 +46,7 @@ const OrderCard = ({ order }) => {
     } else {
       const cardFooterStatus = (
         <h4>
-          <i class="fa-solid fa-circle-check"></i> &nbsp;approved
+          <i className="fa-solid fa-circle-check"></i> &nbsp;approved
         </h4>
       );
       return cardFooterStatus;
