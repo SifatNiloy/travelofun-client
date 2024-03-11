@@ -11,6 +11,8 @@
 
 .card-offer:hover {
   transform: scale(1.05);
+  z-index: 1;
+  background-color: #e8f2e1;
 }
 
 .price {

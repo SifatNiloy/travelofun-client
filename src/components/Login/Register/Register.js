@@ -10,9 +10,9 @@ import Loading from "../../Shared/Loading/Loading";
 
 const Register = () => {
   const [agree, setAgree] = useState(false);
-  const [createUserWithEmailAndPassword, user, loading, ] =
+  const [createUserWithEmailAndPassword, user, loading] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-  const [updateProfile, updating,] = useUpdateProfile(auth);
+  const [updateProfile, updating] = useUpdateProfile(auth);
   const nameRef = useRef("");
   const emailRef = useRef("");
   const passwordRef = useRef("");
@@ -31,12 +31,18 @@ const Register = () => {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    // const agree = event.target.terms.checked;
 
-    createUserWithEmailAndPassword(email, password);
-    await updateProfile({ displayName: name });
-    console.log("Updated profile");
+    try {
+      await createUserWithEmailAndPassword(email, password);
+      await updateProfile(auth.currentUser, { displayName: name });
+      console.log("Updated profile");
+      navigate("/home");
+    } catch (error) {
+      console.error("Error during registration:", error.message);
+      // Handle the error (show a message to the user, etc.)
+    }
   };
+
   return (
     <div className="container w-50 mx-auto">
       <h2 className="login-title  text-center mt-5 mb-3">Please register</h2>
@@ -68,7 +74,7 @@ const Register = () => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check
-            onClick={() => setAgree(!agree)}
+            onChange={() => setAgree(!agree)}
             type="checkbox"
             name="terms"
             id="terms"

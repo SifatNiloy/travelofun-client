@@ -1,3 +1,12 @@
 .login-title {
     color: rgb(0, 69, 133);
 }
+
+.login-container{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 1%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #ccc;
+}

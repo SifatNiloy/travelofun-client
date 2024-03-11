@@ -17,7 +17,7 @@ const Offers = () => {
   return (
     <div className="offer-page">
       <div className="py-4 container">
-        <h2 className="text-center mt-2 display-4 fw-bold">Special Offers</h2>
+        <h2 className="text-center mt-2  display-4 fw-bold">Special Offers</h2>
         <div className="exclusive-discount text-center">
           <h3 className="ms-5">
             Explore exclusive travel deals for every season
@@ -30,12 +30,12 @@ const Offers = () => {
         </h3>
         <div className="row">
           {productData.map((product, index) => (
-            <Card
+            <Card 
               key={index}
               className="col-sm-12 col-md-6 col-lg-4 mt-2 card-offer"
             >
               <Card.Img variant="top" src={product.image} />
-              <Card.Body>
+              <Card.Body >
                 <Card.Title>{product.name}</Card.Title>
                 <Card.Text>
                   <p className="price">Price: ${product.price}</p>
