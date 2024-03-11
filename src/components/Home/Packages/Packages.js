@@ -5,7 +5,7 @@ const Packages = () => {
   const [packages, setPackages] = useState([]);
   useEffect(() => {
     const getPackages = async () => {
-      fetch("http://localhost:5000/package")
+      await fetch("https://travelofun-api.sifatniloy.top/package")
         .then((res) => res.json())
         .then((data) => setPackages(data));
       //   const url = `http://localhost:5000`;

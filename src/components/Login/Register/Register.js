@@ -1,139 +1,97 @@
-import React, { useContext, useState } from "react";
-import { useForm } from "react-hook-form";
-import { toast } from "react-hot-toast";
+import React, { useRef, useState } from "react";
+import { Button, Form } from "react-bootstrap";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../contexts/AuthProvider";
-import useToken from "../../hooks/useToken";
+import auth from "../../../firebase.init";
+import Loading from "../../Shared/Loading/Loading";
 
-const SignUp = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const { createUser, updateUser } = useContext(AuthContext);
-  const [signUpError, setSignUpError] = useState("");
-  const [createdUserEmail, setCreatedUserEmail] = useState("");
-  const [token] = useToken(createdUserEmail);
+const Register = () => {
+  const [agree, setAgree] = useState(false);
+  const [createUserWithEmailAndPassword, user, loading, ] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const [updateProfile, updating,] = useUpdateProfile(auth);
+  const nameRef = useRef("");
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
   const navigate = useNavigate();
-  if (token) {
-    navigate("/");
+  const navigateLogin = () => {
+    navigate("/login");
+  };
+  if (loading || updating) {
+    return <Loading></Loading>;
   }
-  const handleSignUp = (data) => {
-    setSignUpError("");
-    createUser(data.email, data.password)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        toast("User created successfully");
-        const userInfo = {
-          displayName: data.name,
-        };
-        updateUser(userInfo)
-          .then(() => {
-            saveUser(data.name, data.email);
-          })
-          .catch((err) => console.error(err));
-      })
-      .catch((error) => {
-        console.log(error);
-        setSignUpError(error.message);
-      });
-  };
-  const saveUser = (name, email) => {
-    const user = { name, email };
-    fetch(`http://doctors-portal2.sifatniloy.com/users`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setCreatedUserEmail(email);
-      });
-  };
+  if (user) {
+    navigate("/home");
+  }
+  const handleRegister = async (event) => {
+    event.preventDefault();
+    const name = nameRef.current.value;
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+    // const agree = event.target.terms.checked;
 
+    createUserWithEmailAndPassword(email, password);
+    await updateProfile({ displayName: name });
+    console.log("Updated profile");
+  };
   return (
-    <div className="h-[800px] flex justify-center items-center">
-      <div className="w-96 p-7">
-        <h1 className="text-xl text-center">Sign Up</h1>
-        <form onSubmit={handleSubmit(handleSignUp)}>
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              {" "}
-              <span className="label-text">Name </span>{" "}
-            </label>
-            <input
-              type="text"
-              {...register("name", {
-                required: "name is required",
-              })}
-              className="input input-bordered input-success w-full max-w-xs"
-            />
-            {errors.name && (
-              <span className="text-red-400">{errors.name.message}</span>
-            )}
-          </div>
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              {" "}
-              <span className="label-text">Email </span>{" "}
-            </label>
-            <input
-              type="email"
-              {...register("email", {
-                required: "email is required",
-              })}
-              className="input input-bordered input-success w-full max-w-xs"
-            />
-            {errors.email && (
-              <span className="text-red-400">{errors.email.message}</span>
-            )}
-          </div>
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              {" "}
-              <span className="label-text">Password </span>{" "}
-            </label>
-            <input
-              type="password"
-              {...register("password", {
-                required: "password is required",
-                minLength: {
-                  value: 6,
-                  message: "password should be at least 6 characters or longer",
-                },
-                pattern: {
-                  value: /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/,
-                  message:
-                    "password must have uppercase, number and special characters",
-                },
-              })}
-              className="input input-bordered input-success w-full max-w-xs"
-            />
-            {errors.password && (
-              <span className="text-red-400">{errors.password.message}</span>
-            )}
-          </div>
-          <br />
-          <input className="btn btn-accent w-full" type="submit" />
-          {signUpError && <p className="text-red-500"> {signUpError} </p>}
-        </form>
-        <p>
-          Already have an account?{" "}
-          <Link className="text-secondary" to="/login">
-            Please Login{" "}
-          </Link>{" "}
-        </p>
-        <div className="divider">OR</div>
-        <button className="btn btn-outline w-full text-accent">
-          CONTINUE WITH GOOGLE
-        </button>
-      </div>
+    <div className="container w-50 mx-auto">
+      <h2 className="login-title  text-center mt-5 mb-3">Please register</h2>
+      <Form onSubmit={handleRegister}>
+        <Form.Group className="mb-3" controlId="formBasicName">
+          <Form.Control
+            ref={nameRef}
+            type="name"
+            placeholder="Your name"
+            required
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Control
+            ref={emailRef}
+            type="email"
+            placeholder="Your email"
+            required
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Control
+            ref={passwordRef}
+            type="password"
+            placeholder="Password"
+            required
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Form.Check
+            onClick={() => setAgree(!agree)}
+            type="checkbox"
+            name="terms"
+            id="terms"
+            className={agree ? "opacity-100" : "opacity-50"}
+            label="Accept Our terms and conditions"
+          />
+        </Form.Group>
+        <Button variant="primary" type="submit" disabled={!agree}>
+          Sign Up
+        </Button>
+      </Form>
+      <p className="mt-2">
+        Already have an account ?{" "}
+        <Link
+          to="/login"
+          className="text-danger pe-auto text-decoration-none"
+          onClick={navigateLogin}
+        >
+          Log in
+        </Link>
+      </p>
     </div>
   );
 };
 
-export default SignUp;
+export default Register;
