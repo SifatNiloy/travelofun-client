@@ -9,7 +9,11 @@ const MyOrderCard = ({ order }) => {
       "Are you sure you want to delete this package? "
     );
     if (proceed) {
+<<<<<<< HEAD
       const url = `https://travelofun-api.sifatniloy.top/orders/${id}`;
+=======
+      const url = `http://localhost:5000/order/${id}`;
+>>>>>>> ffb01f7e53fa65c4a196b132bb617a062f827239
       fetch(url, {
         method: "DELETE",
       })

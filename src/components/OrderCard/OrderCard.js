@@ -7,7 +7,11 @@ const OrderCard = ({ order }) => {
   // Change status and update data from database function
   const updatePackage = (id) => {
     order.status = "approved";
+<<<<<<< HEAD
     const url = `https://travelofun-api.sifatniloy.top/orders/${_id}`;
+=======
+    const url = `http://localhost:5000/order/${_id}`;
+>>>>>>> ffb01f7e53fa65c4a196b132bb617a062f827239
     fetch(url, {
       method: "PUT",
       headers: {
@@ -24,7 +28,11 @@ const OrderCard = ({ order }) => {
       "Are you sure you want to delete this package? "
     );
     if (proceed) {
+<<<<<<< HEAD
       const url = `https://travelofun-api.sifatniloy.top/orders/${id}`;
+=======
+      const url = `http://localhost:5000/order/${id}`;
+>>>>>>> ffb01f7e53fa65c4a196b132bb617a062f827239
       fetch(url, {
         method: "DELETE",
       })
@@ -46,7 +54,11 @@ const OrderCard = ({ order }) => {
     } else {
       const cardFooterStatus = (
         <h4>
+<<<<<<< HEAD
           <i class="fa-solid fa-circle-check"></i> &nbsp;approved
+=======
+          <i className="fa-solid fa-circle-check"></i> &nbsp;approved
+>>>>>>> ffb01f7e53fa65c4a196b132bb617a062f827239
         </h4>
       );
       return cardFooterStatus;

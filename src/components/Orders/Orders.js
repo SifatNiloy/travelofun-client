@@ -6,7 +6,11 @@ const Orders = () => {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     const getOrders = async () => {
+<<<<<<< HEAD
       const url = `https://travelofun-api.sifatniloy.top/orders`;
+=======
+      const url = `http://localhost:5000/order`;
+>>>>>>> ffb01f7e53fa65c4a196b132bb617a062f827239
       const { data } = await axios.get(url);
       setOrders(data);
     };

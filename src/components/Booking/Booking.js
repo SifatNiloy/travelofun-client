@@ -1,15 +1,28 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import "./Booking.css";
 import auth from "../../firebase.init";
 import axios from "axios";
+=======
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useParams } from "react-router-dom";
+import auth from "../../firebase.init";
+import "./Booking.css";
+>>>>>>> ffb01f7e53fa65c4a196b132bb617a062f827239
 const Booking = () => {
   const { packageId } = useParams();
   const [singlepackage, setSinglepackage] = useState({});
   const [user, loading, error] = useAuthState(auth);
   useEffect(() => {
+<<<<<<< HEAD
     const url = `https://travelofun-server.onrender.com/${packageId}`;
+=======
+    const url = `http://localhost:5000/${packageId}`;
+>>>>>>> ffb01f7e53fa65c4a196b132bb617a062f827239
     fetch(url)
       .then((res) => res.json())
       .then((data) => setSinglepackage(data));
@@ -28,6 +41,7 @@ const Booking = () => {
       phone: event.target.phone.value,
       status: "pending",
     };
+<<<<<<< HEAD
     axios
       .post("https://travelofun-api.sifatniloy.top/orders", order)
       .then((res) => {
@@ -36,6 +50,14 @@ const Booking = () => {
           alert("your order is booked ");
         }
       });
+=======
+    axios.post("http://localhost:5000/order", order).then((res) => {
+      const { data } = res;
+      if (data.insertedId) {
+        alert("your order is booked ");
+      }
+    });
+>>>>>>> ffb01f7e53fa65c4a196b132bb617a062f827239
   };
   return (
     <div className="text-center py-5 details">

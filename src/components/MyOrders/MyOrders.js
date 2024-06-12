@@ -10,7 +10,11 @@ const MyOrders = () => {
     const getOrders = async () => {
       const myemail = user.email;
       console.log(myemail);
+<<<<<<< HEAD
       const url = `https://travelofun-api.sifatniloy.top/orders`;
+=======
+      const url = `http://localhost:5000/order`;
+>>>>>>> ffb01f7e53fa65c4a196b132bb617a062f827239
       const { data } = await axios.get(url);
       // console.log(data);
       const mydata = data.filter((allorder) => allorder.email === myemail);
