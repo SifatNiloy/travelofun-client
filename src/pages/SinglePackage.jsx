@@ -20,7 +20,7 @@ const SinglePackage = ({ singlePackage }) => {
       </div>
       <div className="px-6 pt-4 pb-2">
         <p className="text-gray-900 font-semibold">${price}</p>
-        <p className="text-gray-600 text-sm">{duration}</p>
+        <p className="text-gray-600 text-sm mb-4">{duration}</p>
       </div>
       <div className="px-6 pb-4">
         <Link

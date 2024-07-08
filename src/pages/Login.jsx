@@ -57,7 +57,7 @@ const Login = () => {
           <h2 className="text-center text-3xl font-extrabold text-gray-900">Please Log In</h2>
           <p className="mt-2 text-center text-sm text-gray-600">
             Or{" "}
-            <Link to="/register" className="font-medium text-indigo-600 hover:text-indigo-500">
+            <Link to="/signup" className="font-medium text-indigo-600 hover:text-indigo-500">
               create an account
             </Link>
           </p>
