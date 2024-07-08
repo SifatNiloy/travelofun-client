@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import auth from "../firebase.init";
+import auth from "../Firebase/firebase.config";
 import Loading from "../pages/Loading";
 import SocialLogin from "../pages/SocialLogin";
 

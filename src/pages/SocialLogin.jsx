@@ -1,7 +1,7 @@
 
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
-import auth from "../firebase.init";
+import auth from "../Firebase/firebase.config";
 import Loading from "../pages/Loading";
 
 const SocialLogin = () => {
